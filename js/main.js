@@ -13,7 +13,8 @@ function InserirFilmesNaTela(filmes) {
 
     const section = document.createElement('section');
     section.className = 'cards';
-    section.style.background = `url(${posterPath})`
+    section.style.background = `url(${posterPath})`;
+    section.style.backgroundSize = '170px 250px';
     section.dataset.movieId = movieId;
 
     ElementoParaInserirFilmes.appendChild(section);
