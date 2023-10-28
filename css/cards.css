@@ -19,19 +19,55 @@
     padding: 35px;
 }
 
-.cards {
-    background: url(../img/POSTER.jpg);
-    background-size: 170px 250px;
-    background-position: center;
-    width: 170px;
+.main
+
+{
     height: 250px;
-    border-radius: 8px;
+    position: relative;
     margin: 30px;
+    overflow: hidden;
     transition: .2s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
-.cards:hover
+
+.cards {
+    background: url(../img/POSTER.jpg);
+    background-size: 170px 250px;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 170px;
+    height: 250px;
+    border-radius: 8px;
+}
+
+.main:hover
 
 {
-    margin-top: -30px;
+    height: 300px;
+    margin-top: -20px;
 }
+
+.contents
+
+{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.nota, .favoritar
+
+{
+    display: flex;
+    color: white;
+}
+
+.nota-text, .favoritar-text
+
+{
+    margin-left: 10px;
+}
+
