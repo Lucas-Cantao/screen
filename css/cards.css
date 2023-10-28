@@ -21,7 +21,7 @@
 
 .cards {
     background: url(../img/POSTER.jpg);
-    background-size: cover;
+    background-size: 170px 250px;
     background-position: center;
     width: 170px;
     height: 250px;
