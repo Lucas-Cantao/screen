@@ -1,0 +1,81 @@
+.pesquisa
+
+{
+    display: flex;
+    padding: 2px;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 20px;
+}
+
+.cabecalho__titulo {
+    font-size: clamp(16px, 2vh + 2vw, 32px);
+    color: #eeeeee;
+    cursor: pointer;
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+}
+
+.cabecalho__pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 22vw;
+    min-width: 200px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background: #eeeeee;
+}
+
+.cabecalho__pesquisa-input {
+    width: 95%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cabecalho__pesquisa-input:focus {
+    outline: none;
+}
+
+.cabecalho__pesquisa-lupa {
+    width: 18.35px;
+    height: 19.35px;
+    flex-shrink: 0;
+    cursor: pointer;
+    pointer-events: pointer;
+}
+
+
+.login
+
+{
+    margin-left: 15px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #4F0006;
+    border-radius: 6px;
+    color: #fff;
+    width: 70px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+}
+
+
+
+@media screen and (min-width: 375px) and (max-width: 1024px) {
+    .cabecalho {
+        width: 90vw;
+    }
+    .cabecalho__pesquisa {
+        width: 90%;
+    }
+}

@@ -1,0 +1,37 @@
+.populares
+
+{
+    font-size: clamp(16px, 2vh + 2vw, 32px);
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+    color: #fff;
+    margin-left: 3vw;
+    margin-top: 50px;
+}
+
+
+#filmes
+
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 35px;
+}
+
+.cards {
+    background: url(../img/POSTER.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 170px;
+    height: 250px;
+    border-radius: 8px;
+    margin: 30px;
+    transition: .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.cards:hover
+
+{
+    margin-top: -30px;
+}

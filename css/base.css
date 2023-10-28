@@ -1,0 +1,32 @@
+:root {
+    --bg-color: #000000;
+    --branco: #FFFFFF;
+    --favorite-color: #BA0707;
+    --avaliacao-color: #D7A82F;
+    --card-color: #1D1C3B;
+    --light-blue: #706EA8;
+    --light-gray: #ACACAC;
+    --dark-gray: #8A8A8A;
+}
+
+@font-face {
+    font-family: 'Coolvetica';
+    src: url(font/coolvetica\ rg.otf);
+}
+
+
+*
+
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../img/POSTER.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+    box-shadow: inset 20vw -50px 40px #270100;
+}

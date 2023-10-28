@@ -1,0 +1,48 @@
+.description
+
+{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    color: #eeeeee;
+    margin: 20px;
+    position: relative;
+    margin-top: 12%;
+}
+
+.description .p1
+
+{
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+    font-size: clamp(23px, 3vh + 3vw, 45px);
+}
+
+.description .p2
+
+{
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+    font-size: clamp(12px, 2vh + 2vw, 20px);
+}
+
+.description .buttons
+
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.description .buttons button
+
+{
+    font-size: 14px;
+    cursor: pointer;
+    width: 170px;
+    background: #eeeeee;
+    color: #7a000a;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 7px;
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+}
