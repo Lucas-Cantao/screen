@@ -28,7 +28,7 @@ function InserirFilmesNaTela(filmes) {
     const nota = document.createElement('div');
     nota.className = 'nota';
     const imgStar = document.createElement('img');
-    imgStar.src = '../img/Star.svg';
+    imgStar.src = 'img/Star.svg';
     imgStar.width = '15';
     const nota_text = document.createElement('p');
     nota_text.className = 'nota-text';
@@ -38,7 +38,7 @@ function InserirFilmesNaTela(filmes) {
     const favoritar = document.createElement('div');
     nota.className = 'favoritar';
     const imgFav = document.createElement('img');
-    imgFav.src = '../img/Heart.svg';
+    imgFav.src = 'img/Heart.svg';
     imgFav.width = '15';
     const favoritar_text = document.createElement('p');
     favoritar_text.className = 'favoritar-text';
