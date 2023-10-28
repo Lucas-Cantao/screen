@@ -48,6 +48,9 @@ function InserirFilmesNaTela(filmes) {
 
     main.appendChild(section);
     nota.appendChild(imgStar);
+    nota.appendChild(nota_text);
+    favoritar.appendChild(imgFav);
+    favoritar.appendChild(favoritar_text);
     contents.appendChild(nota);
     contents.appendChild(favoritar);
     main.appendChild(contents);
