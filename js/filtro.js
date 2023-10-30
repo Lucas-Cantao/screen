@@ -12,7 +12,7 @@ function pesquisarFilmes() {
     const searchTerm = inputPesquisa.value.trim(); // Obtém o valor do campo de pesquisa e remove espaços em branco no início e no final
 
     if (searchTerm !== '') {
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=pt-BR&query=${searchTerm}&page=1&include_adult=false`)
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=pt-BR&query=${searchTerm}&page=1&include_adult=true`)
             .then(response => response.json())
             .then(data => {
                 const movies = data.results; // Array de filmes correspondentes aos resultados da pesquisa

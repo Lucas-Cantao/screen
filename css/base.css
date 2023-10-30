@@ -32,3 +32,31 @@ body {
     max-height: 100vh;
     box-shadow: inset 20vw -50px 40px #270100;
 }
+
+.Arrow
+
+{
+    width: 2vw;
+    height: 15vh;
+    z-index: 1;
+    position: absolute;
+    top: 78%;
+    margin: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: grid;
+    place-content: center;
+}
+
+.Arrow img
+
+{
+    rotate: 180deg;
+}
+
+.right
+
+{
+    right: -7px;
+    rotate: 180deg;
+}

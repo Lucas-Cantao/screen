@@ -1,28 +1,47 @@
+.title
+
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+    color: #fff;
+    padding: 25px 3vw;
+}
+
+a
+
+{
+    text-decoration: none;
+    color: #fff;
+}
+
 .populares
 
 {
     font-size: clamp(16px, 2vh + 2vw, 32px);
-    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
-    color: #fff;
-    margin-left: 3vw;
-    margin-top: 50px;
 }
 
 
 #filmes
 
 {
-    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     padding: 35px;
+    flex-wrap: wrap;
+    width: 100%;
 }
+
+
 
 .main
 
 {
+    width: 170px;
     height: 250px;
+    min-width: 170px;
+    min-height: 250px;
     position: relative;
     margin: 30px;
     overflow: hidden;

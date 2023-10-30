@@ -1,5 +1,4 @@
 const ElementoParaInserirFilmes = document.getElementById('filmes');
-const corpo = document.querySelector('.body')
 
 function InserirFilmesNaTela(filmes) {
   ElementoParaInserirFilmes.innerHTML = '';
@@ -46,8 +45,11 @@ function InserirFilmesNaTela(filmes) {
     favoritar_text.className = 'favoritar-text';
     favoritar_text.innerHTML = `Favoritar`;
 
+    const back = movie.backdrop_path;
+
+
     main.addEventListener('mouseenter', () => {
-      corpo.style.background = `url(${posterPath})`;
+      corpo.style.background = `url(${back})`;
     })
     main.addEventListener('mouseout', () => {
       corpo.style.background = `url(img/POSTER.jpg)`;
