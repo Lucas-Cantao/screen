@@ -41,7 +41,6 @@ function InserirFilmesNaTela(filmes) {
     imgFav.className = 'imgFav';
     imgFav.src = 'img/Heart.svg';
     imgFav.width = '15';
-    imgFav.onclick(favoritar(1255));
     imgFav.style.cursor = 'pointer';
     const favoritar_text = document.createElement('p');
     favoritar_text.className = 'favoritar-text';
