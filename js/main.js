@@ -1,4 +1,6 @@
 const ElementoParaInserirFilmes = document.getElementById('filmes');
+const corpo = document.querySelector('.body')
+
 
 function InserirFilmesNaTela(filmes) {
   ElementoParaInserirFilmes.innerHTML = '';
