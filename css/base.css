@@ -27,6 +27,7 @@ body {
     background: url(../img/POSTER.jpg);
     background-size: 100% 100vh;
     background-position: calc(100% + 130px);
+    background-attachment: fixed;
     min-height: 100vh;
     max-height: 100vh;
     box-shadow: inset 20vw -50px 40px #270100;

@@ -1,5 +1,5 @@
 const ElementoParaInserirFilmes = document.getElementById('filmes');
-export const listaDeFavoritos = [];
+const corpo = document.querySelector('.body')
 
 function InserirFilmesNaTela(filmes) {
   ElementoParaInserirFilmes.innerHTML = '';
@@ -36,13 +36,24 @@ function InserirFilmesNaTela(filmes) {
     
     
     const favoritar = document.createElement('div');
-    favoritar.className = 'favoritar';
+    nota.className = 'favoritar';
     const imgFav = document.createElement('img');
+    imgFav.className = 'imgFav';
     imgFav.src = 'img/Heart.svg';
     imgFav.width = '15';
+    imgFav.onclick(favoritar(1255));
+    imgFav.style.cursor = 'pointer';
     const favoritar_text = document.createElement('p');
     favoritar_text.className = 'favoritar-text';
     favoritar_text.innerHTML = `Favoritar`;
+
+    main.addEventListener('mouseenter', () => {
+      corpo.style.background = `url(${posterPath})`;
+    })
+    main.addEventListener('mousedown', () => {
+      corpo.style.background = `url(img/POSTER.jpg)`;
+    })
+
 
 
 
