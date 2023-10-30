@@ -45,7 +45,7 @@ function InserirFilmesNaTela(filmes) {
     favoritar_text.className = 'favoritar-text';
     favoritar_text.innerHTML = `Favoritar`;
 
-    const back = movie.backdrop_path;
+    const back = `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`;
 
 
     main.addEventListener('mouseenter', () => {
