@@ -1,4 +1,4 @@
-import { listaDeFavoritos } from './main.js';
+import { listaDeFavoritos } from './favoritos.js';
 import { apiKey } from './script.js';
 import { InserirFilmesNaTela } from './main.js';
 const filtroAtivo = document.getElementById('cabecalho__checkbox');
