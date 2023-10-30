@@ -49,7 +49,7 @@ function InserirFilmesNaTela(filmes) {
     main.addEventListener('mouseenter', () => {
       corpo.style.background = `url(${posterPath})`;
     })
-    main.addEventListener('mousedown', () => {
+    main.addEventListener('mouseout', () => {
       corpo.style.background = `url(img/POSTER.jpg)`;
     })
 
