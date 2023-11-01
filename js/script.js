@@ -20,5 +20,27 @@ home.addEventListener('click', () => {
   document.querySelector('.card__lista-vazia').style.display = 'none';
 });
 
+const logado = localStorage.getItem("logado")
+const pesquisa = document.querySelector(".pesquisa")
+
+if(logado == "logado"){
+
+  const user = document.createElement("div")
+  user.className = 'user';
+  user.innerHTML = `Usuário: ${localStorage.getItem("usuario")}`
+  pesquisa.appendChild(user)
+}
+else{
+
+  const login = document.createElement('a')
+  login.href = 'pages/login.html'
+  login.className = 'login'
+  const p = document.createElement('p')
+  p.innerHTML = 'Login'
+
+  login.appendChild(p)
+  pesquisa.appendChild(login)
+}
+
 
 // https://api.themoviedb.org/3/search/movie?query=f&api_key=5d93ad67ab4499fded984604a2f5c80b&language=pt-BR

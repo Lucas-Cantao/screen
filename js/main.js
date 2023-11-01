@@ -17,7 +17,6 @@ function InserirFilmesNaTela(filmes) {
     section.style.backgroundSize = '170px 250px';
     section.dataset.movieId = movieId;
 
-
     
     
 

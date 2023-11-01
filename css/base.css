@@ -23,3 +23,14 @@ body {
     /* box-shadow: inset 20vw -50px 40px #270100; */
     transition:  .3s all ease;
 }
+
+.user
+
+{
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}

@@ -8,10 +8,13 @@
     margin: 20px;
     position: relative;
     margin-top: 12%;
-    background: #270100;
+    background: #0000005b;
+    backdrop-filter: blur(10px);
     border-radius: 40px;
-    box-shadow: 0 0 10px 40px #270100;
     margin-left: 100px;
+    padding: 20px;
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
 }
 
 .description .p1
@@ -31,6 +34,7 @@
 .description .buttons
 
 {
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

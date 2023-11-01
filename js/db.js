@@ -10,20 +10,27 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-
 let db = firebase.firestore();
+const banco = db.collection("logins")
 
-db.collection("logins").doc("1").get().then((docu) => {
-    if(docu.exists){
-        console.log("existe")
-        
-        const dados = docu.data()
-        const nome = dados.emailUser
-        console.log(nome)
+const logar = () => {
+    const email = document.querySelector("#email").value
+    const senha = document.querySelector("#pass").value
+    banco.onSnapshot((docs) => {
+        docs.docChanges().forEach(changes => {
+            if(changes.type = "added"){
+                
+            const doc = changes.doc
+            const dados = doc.data()
 
+            if(email == dados.emailUser && senha == dados.pwUser){
+                console.log('logado')
+                localStorage.setItem("logado", "logado")
+                localStorage.setItem("usuario", `${dados.usuario}`)
+            }else{
+                console.log("Não logado")
+            }
+        }
+    });
 
-
-    }else{
-        console.log("Não existe!")
-    }
-})
+})}

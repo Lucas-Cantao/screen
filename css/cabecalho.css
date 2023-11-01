@@ -69,6 +69,7 @@
     height: 40px;
     display: grid;
     place-content: center;
+    text-align: center;
     border: none;
     cursor: pointer;
     transition: .3s cubic-bezier(0.19, 1, 0.22, 1);
