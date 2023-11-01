@@ -1,0 +1,337 @@
+@font-face {
+    font-family: 'Coolvetica';
+    src: url(font/coolvetica\ rg.otf);
+}
+
+
+
+
+*
+
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body
+
+{
+    background: url(../img/background_login_page.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+
+main
+
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+
+main .screen
+
+{
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+    font-size: clamp(74px, 4vh + 4vw, 97px);
+    color: #eeeeee;
+}
+
+
+
+#login
+
+{
+    width: 350px;
+    border-radius: 40px;
+    background: #fff;
+}
+
+#lg
+
+{
+    padding: 28px;
+}
+
+.login
+
+{
+    color: #4F0006;
+    font-size: clamp(33px, 3vh + 3vw, 54px);
+    font-family: 'Coovetica', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.dados
+
+{
+    color: #472629a8;
+    font-size: clamp(7px, 2vh + 2vw, 10px);
+    margin-top: 10px;
+}
+
+#login input[type=text], input[type=password]
+
+{
+    width: 100%;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 12px 25px;
+    background: #4F0006;
+    margin: 10px 0;
+}
+
+#login input:focus
+
+{
+    outline: none;
+}
+
+#login input::placeholder
+
+{
+    color: #eeeeee;
+    opacity: 0.5;
+}
+
+.lg-es
+
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lg
+
+{
+    width: 55%;
+    border-radius: 20px;
+    background: #4F0006;
+    border: none;
+    padding: 10px 20px;
+    color: #eeeeee;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .lg::before
+
+{
+    content: '';
+    left: -30px;
+    position: absolute;
+    width: 10px;
+    height: 200px;
+    background: aqua;
+    opacity: 0.7;
+    animation: reflex .5s linear infinite;
+    rotate: -45deg;
+}
+
+@keyframes reflex {
+    0%{left: -30px;}
+    100%{left: 202%;}
+} */
+
+.es
+
+{
+    width: 40%;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #4F0006;
+    font-weight: 600;
+    font-size: clamp(8px, 2vh + 2vw, 12px);
+}
+
+
+#check
+
+{
+    margin-top: 20px;
+}
+
+.termos
+
+{
+    display: flex;
+    font-size: clamp(4px, 2vh + 2vw, 9px);
+    color: #4F0006;
+    margin-top: 4px;
+}
+
+.termos label
+
+{
+    display: flex;
+    align-items: center;
+}
+
+.termos input
+
+{
+    opacity: 0;
+}
+
+.termos span
+
+{
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    margin-right: 10px;
+    border: 1px solid #4F0006;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.termos span::before
+
+{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 4px;
+    rotate: -45deg;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    margin-top: -4px;
+}
+
+
+
+
+.termos input:checked + span
+
+{
+    background: #4F0006;
+}
+
+
+.conta
+
+{
+    color: #4F0006;
+    font-size: clamp(24px, 2vh + 2vw, 27px);
+    font-family: 'Coovetica', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+
+.cadastro-buttons
+
+
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastro-buttons button
+
+{
+    width: 90%;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 60px 10px 10px;
+    cursor: pointer;
+    margin: 7px;
+}
+
+.cadastro
+
+{
+    background: #4F0006;
+}
+
+
+.copy
+
+{
+    color: white;
+    font-size: clamp(4px, 2vh + 2vw, 8px);
+    font-weight: 600;
+}
+
+.entrar
+
+{
+    margin-left: 5px;
+}
+
+.google
+
+{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    background: #DA432E;
+}
+
+.google img, .entrar
+
+{
+    z-index: 1;
+}
+
+
+.card
+
+{
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    margin-top: 60px;
+    animation: fallYellow 3s ease infinite;
+    box-shadow: 0 0 6px black;
+}
+
+.card_yellow
+
+{
+    margin-left: 100px;
+    background: #FFC607;
+}
+
+.card_blue
+
+{
+    margin-left: 170px;
+    animation-delay: .2s;
+    background: #2673F3;
+}
+
+.card_green
+
+{
+    margin-left: 220px;
+    animation-delay: .3s;
+    background: #009D58;
+}
+
+@keyframes fallYellow {
+    0%{rotate: 0;}
+    50%{rotate: -45deg;}
+    100%{rotate: 0deg;}
+}

@@ -8,6 +8,7 @@
     font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
     color: #fff;
     padding: 25px 3vw;
+    margin-top: 90px;
 }
 
 a
@@ -31,23 +32,10 @@ a
     padding: 35px;
     flex-wrap: wrap;
     width: 100%;
+    justify-content: center;
 }
 
 
-
-.main
-
-{
-    width: 170px;
-    height: 250px;
-    min-width: 170px;
-    min-height: 250px;
-    position: relative;
-    margin: 30px;
-    overflow: hidden;
-    transition: .2s cubic-bezier(0.215, 0.610, 0.355, 1);
-    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
-}
 
 
 .cards {
@@ -58,37 +46,13 @@ a
     width: 170px;
     height: 250px;
     border-radius: 8px;
+    transition: .3s cubic-bezier(0.19, 1, 0.22, 1);
+    margin: 50px 40px;
 }
 
 
-.main:hover
+.cards:hover
 
 {
-    height: 300px;
-    margin-top: -20px;
+    margin-top: -40px;
 }
-
-.contents
-
-{
-    height: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
-.nota, .favoritar
-
-{
-    display: flex;
-    color: white;
-}
-
-.nota-text, .favoritar-text
-
-{
-    margin-left: 10px;
-}
-
