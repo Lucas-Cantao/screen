@@ -17,13 +17,21 @@
             <div id="lg">
                 <p class="login">Login</p>
                 <p class="dados">Digite seus dados de acesso nos campos abaixo</p>
+                <p class="req">É obrigatório preencher os dois campos</p>
                 <input type="text" name="email" id="email" maxlength="100" required autocomplete="off" placeholder="Email ou nome de usuário">
-                <input type="password" name="pswd" id="pass" autocomplete="off" placeholder="Senha">
+                <label for="" id="eyes">
+                    <input type="password" name="pswd" id="pass" autocomplete="off" placeholder="Senha">
+                    <div class="eyes">
+                        <img class="closed_eye eye" src="../img/closed_eye.png" alt="" width="23">
+                        <img class="opened_eye eye" src="../img/opened_eye.png" alt="" width="23">
+                    </div>
+                </label>
                 <div class="lg-es">
                     <button class="lg" onclick="logar()">Entrar</button>
-                    <a href="#" class="es">Esqueçeu sua senha?</a>
+                    <a href="#" class="es">Esqueceu sua senha?</a>
                 </div>
                 <div id="check">
+                    <p class="reqCheck">É necessário as duas caixas marcadas para efetuar o login</p>
                     <div class="termos">
                         <label>
                             <input type="checkbox" name="termos" id="termos" required>
@@ -33,7 +41,7 @@
                     </div>
                     <div class="termos">
                         <label>
-                            <input type="checkbox" name="termos" id="termos" required>
+                            <input type="checkbox" name="termos" id="not" required>
                             <span></span>
                             <p>Aceito receber notificações via email</p>
                         </label>
@@ -55,6 +63,58 @@
         </div>
         <p class="copy">&copy;Screen 2023 - Todos direitos reservados</p>
     </main>
+
+
+
+
+    <div class="campos">
+        <div class="alert">
+            <div id="nao_logado">
+                <div>
+                    <p>Login não efetuado</p>
+                    <img src="../img/x_nao_logado.png" alt="">
+                </div>
+                <div class="close_campos"></div>
+            </div>
+            <p style="margin-top: 20px;">Verificar se as seguintes informações estão de acordo:</p>
+            <ul style="margin-top: 30px;">
+                <li>Verifique se todos os dados de login(email ou nome de usuário) foram informados. Segue imagem:</li>
+                <img src="../img/login.png" alt="">
+                <li>A caixa referente aos termos e condições está marcadas.</li>
+                <img src="../img/termos.png" alt="">
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="nao_logado">
+        <div class="alert">
+            <div id="nao_logado">
+                <div>
+                    <p>Login não efetuado</p>
+                    <img src="../img/x_nao_logado.png" alt="">
+                </div>
+                <div class="close_nao_logado"></div>
+            </div>
+            <p style="margin: 15px;">Email ou senha incorreto</p>
+            <p>OBS: Mais duas tentativas erradas e você será bloqueado por 10 minutos por questões de segurança</p>
+        </div>
+    </div>
+
+
+    <div class="logado">
+        <div class="alert">
+            <div id="logado">
+                <div>
+                    <p>Login efetuado com sucesso</p>
+                    <img src="../img/check.png" alt="">
+                </div>
+            </div>
+            <p class="redirect" style="margin: 15px;"></p>
+        </div>
+    </div>
+
     <script src="../js/db.js"></script>
 </body>
 </html>

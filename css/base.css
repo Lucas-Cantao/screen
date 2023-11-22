@@ -4,12 +4,15 @@
 }
 
 
+
 *
 
 {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+    
 }
 
 
@@ -29,7 +32,6 @@ body {
 {
     font-size: 15px;
     color: white;
-    font-weight: 600;
     text-align: center;
     margin: 10px;
     cursor: pointer;

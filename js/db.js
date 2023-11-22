@@ -11,26 +11,92 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 let db = firebase.firestore();
-const banco = db.collection("logins")
+const banco = db.collection("logins");
+
+
+
 
 const logar = () => {
-    const email = document.querySelector("#email").value
-    const senha = document.querySelector("#pass").value
+    const email = document.querySelector("#email");
+    const senha = document.querySelector("#pass");
+    const req = document.querySelector(".req");
+    const reqCheck = document.querySelector(".reqCheck");
+    const input1 = document.querySelector("#termos");
+    const input2 = document.querySelector("#not");
+    const campos = document.querySelector(".campos");
+    const nao_logado = document.querySelector(".nao_logado");
+    const logado = document.querySelector('.logado')
+    const redirect = document.querySelector('.redirect')
+
+
+    function close(nome){
+        const toClose = document.querySelector(`.${nome}`);
+        const closer = document.querySelector(`.close_${nome}`);
+
+        closer.addEventListener('click', ()=>{
+            toClose.style.display = 'none';
+        });
+    };
+
+
     banco.onSnapshot((docs) => {
         docs.docChanges().forEach(changes => {
             if(changes.type = "added"){
                 
-            const doc = changes.doc
-            const dados = doc.data()
-
-            if(email == dados.emailUser && senha == dados.pwUser){
-                console.log('logado')
-                localStorage.setItem("logado", "logado")
-                localStorage.setItem("usuario", `${dados.usuario}`)
-            }else{
-                console.log("Não logado")
-            }
-        }
+                const doc = changes.doc;
+                const dados = doc.data();
+                if(email.value == '' ||  senha.value== '' || input1.checked != true){
+                    campos.style.display = 'grid';
+                    close('campos');
+                }else{
+                    if(email.value == dados.emailUser || email.value == dados.usuario && senha.value == dados.pwUser){
+                        logado.style.display = 'grid';
+                        let secs = 5
+                        setInterval(()=>{
+                            if(secs != 0){
+                                redirect.innerHTML = `Você será redirecionado para a página inicial já logado dentro de 5 segundo: ${secs}`
+                                secs--
+                            }
+                            else{
+                                window.location.replace('../index.html')
+                            }
+                        }, 1000)
+                        localStorage.setItem("logado", "logado");
+                        localStorage.setItem("usuario", `${dados.usuario}`);
+                    }else{
+                        nao_logado.style.display = 'grid';
+                        close('nao_logado');
+                    };
+                };
+            };
+        });
+        
     });
+};
 
-})}
+
+
+const closed_eye = document.querySelector('.closed_eye')
+const opened_eye = document.querySelector('.opened_eye')
+const pass = document.querySelector('#pass')
+const eyes = document.querySelector('.eyes')
+
+let mostrando = false
+
+function showPw(){
+  if(mostrando == false){
+    closed_eye.style.display = 'none';
+    opened_eye.style.display = 'block';
+    pass.type = 'text';
+    mostrando = true;
+  }else{
+    closed_eye.style.display = 'block';
+    opened_eye.style.display = 'none';
+    pass.type = 'password';
+    mostrando = false;
+  }
+}
+
+
+
+eyes.addEventListener('click', showPw)

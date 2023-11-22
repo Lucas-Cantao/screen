@@ -18,6 +18,23 @@ a
     color: #fff;
 }
 
+.search_result
+
+{
+    display: none;
+}
+
+.pesquisaDeFilmes
+
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
 .populares
 
 {
@@ -25,34 +42,44 @@ a
 }
 
 
-#filmes
+#filmes, .filmesDaPesquisa
 
 {
     display: flex;
-    padding: 35px;
     flex-wrap: wrap;
-    width: 100%;
     justify-content: center;
+    transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.filmes
 
-
+{
+    padding: 35px;
+    margin-top: -200px;
+}
 
 .cards {
     background: url(../img/POSTER.jpg);
     background-size: 170px 250px;
-    background-position: top;
-    background-repeat: no-repeat;
     width: 170px;
     height: 250px;
     border-radius: 8px;
-    transition: .3s cubic-bezier(0.19, 1, 0.22, 1);
-    margin: 50px 40px;
 }
 
 
-.cards:hover
+.card
 
 {
-    margin-top: -40px;
+    width: 170px;
+    height: 250px;
+    margin: 50px 40px;
+    transition: .3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.card:hover
+
+{
+    height: 310px;
+    margin-top: -10px;
+
 }

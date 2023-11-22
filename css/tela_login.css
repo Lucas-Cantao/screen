@@ -67,16 +67,16 @@ main .screen
 {
     color: #4F0006;
     font-size: clamp(33px, 3vh + 3vw, 54px);
-    font-family: 'Coovetica', Arial, Helvetica, sans-serif;
-    font-weight: 600;
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
 }
 
-.dados
+.dados, .req, .reqCheck
 
 {
     color: #472629a8;
     font-size: clamp(7px, 2vh + 2vw, 10px);
     margin-top: 10px;
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
 }
 
 #login input[type=text], input[type=password]
@@ -156,8 +156,8 @@ main .screen
     margin: 0 10px;
     text-decoration: none;
     color: #4F0006;
-    font-weight: 600;
     font-size: clamp(8px, 2vh + 2vw, 12px);
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
 }
 
 
@@ -181,6 +181,7 @@ main .screen
 {
     display: flex;
     align-items: center;
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
 }
 
 .termos input
@@ -231,8 +232,7 @@ main .screen
 {
     color: #4F0006;
     font-size: clamp(24px, 2vh + 2vw, 27px);
-    font-family: 'Coovetica', Arial, Helvetica, sans-serif;
-    font-weight: 600;
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
     margin-top: 30px;
 }
 
@@ -269,8 +269,8 @@ main .screen
 
 {
     color: white;
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
     font-size: clamp(4px, 2vh + 2vw, 8px);
-    font-weight: 600;
 }
 
 .entrar
@@ -334,4 +334,159 @@ main .screen
     0%{rotate: 0;}
     50%{rotate: -45deg;}
     100%{rotate: 0deg;}
+}
+
+
+
+
+.req, .reqCheck
+
+{
+    color: red;
+    display: none;
+}
+
+
+.campos, .nao_logado, .logado
+
+{
+    width: 100%;
+    background: #0000008c;
+    min-height: 100vh;
+    display: none;
+    place-content: center;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.alert
+
+{
+    width: 30vw;
+    min-width: 400px;
+    border-radius: 20px;
+    padding: 30px;
+    background: #ffffff;
+    backdrop-filter: blur(8px);
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+}
+
+#nao_logado
+
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nao_logado img, #logado img
+
+{
+    margin: 0 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.close_campos, .close_nao_logado
+
+{
+    background: url(../img/x.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.close_campos:hover, .close_nao_logado:hover
+
+{
+    rotate: 360deg;
+    scale: 1.05;
+    box-shadow: 0 0 10px black;
+}
+
+
+#nao_logado div, #logado div
+
+{
+    display: flex;
+    align-items: center;
+}
+
+.alert li
+
+{
+    margin: 10px;
+    font-size: clamp(10px, 2vh + 2vw, 13px);
+}
+
+.alert ul img
+
+{
+    width: 100%;
+}
+
+
+.eye
+
+
+{
+    padding: 3px;
+    box-sizing: border-box;
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.eye:hover
+
+{
+    scale: 1.1;
+}
+
+#eyes
+
+{
+    position: relative;
+    align-items: center;
+    justify-content: end;
+}
+
+.eyes
+
+{
+    position: absolute;
+    border-radius: 12px;
+}
+
+#eyes, .eyes
+
+{
+    display: flex;
+
+}
+
+.eyes
+
+{
+    align-items: center;
+}
+
+.eyes img
+
+{
+    width: 23px;
+    height: 25px;
+    margin-right: 8px;
+    background: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.opened_eye
+
+{
+    display: none;
 }

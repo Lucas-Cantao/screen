@@ -18,12 +18,18 @@
   <body class="body">
     <header class="cabecalho">
       <p class="cabecalho__titulo">Screen</p>
-      
+      <ul>
+        <li style="margin-top: -5px; border-bottom: 2px solid #ff0015;"><a href="index.html">home</a></li>
+        <li><a href="pages/filmes.html">filmes</a></li>
+        <li><a href="pages/series.html">séries</a></li>
+        <li><a href="pages/tvshows.html">TV Shows</a></li>
+        <li><a href="pages/sobre.html">sobre</a></li>
+      </ul>
       <div class="pesquisa">
         <div class="cabecalho__pesquisa">
           <input type="text" class="cabecalho__pesquisa-input"/>
           <span class="cabecalho__pesquisa-lupa">
-            <img src="img/search-icon.svg" alt="" />
+            <img src="img/search-icon.svg" alt=""/>
           </span>
         </div>
       </div>
@@ -38,12 +44,19 @@
       </div>
     </div>
 
-    <div class="title">
-      <p class="populares">Top 15 mais populares</p><a href="#" class="verMais">Ver mais+</a>
+    <div class="pesquisaDeFilmes">
+      <div class="title">
+        <p class="populares search_result">Resultados da pesquisa</p>
+      </div>  
+      <section class="filmesDaPesquisa"></section>
     </div>
-    <section id="filmes">
-    </section>
-
+    <div class="filmes">
+      <div class="title">
+        <p class="populares">Top 15 mais populares</p><a href="#" class="verMais">Ver mais+</a>
+      </div>
+      <section id="filmes"></section>
+    </div>
+    
     <script src="js/script.js" type="module"></script>
     <script src="js/filtro.js" type="module"></script>
     <script src="js/main.js" type="module"></script>

@@ -2,7 +2,6 @@ const ElementoParaInserirFilmes = document.getElementById('filmes');
 const corpo = document.querySelector('.body')
 
 function InserirFilmesNaTela(filmes) {
-  ElementoParaInserirFilmes.innerHTML = '';
   filmes.forEach(movie => {
     const movieId = movie.id;
     const title = movie.title;
@@ -12,18 +11,20 @@ function InserirFilmesNaTela(filmes) {
     const overview = movie.overview;
 
     const section = document.createElement('section');
+    const card = document.createElement('div')
+    card.className = 'card';
     section.className = 'cards';
     section.style.background = `url(${posterPath})`;
     section.style.backgroundSize = '170px 250px';
     section.dataset.movieId = movieId;
-
     
+    card.appendChild(section);
     
 
 
     const back = `https://www.themoviedb.org/t/p/original/${movie.backdrop_path}`;
 
-
+    
     section.addEventListener('mouseenter', () => {
       corpo.style.background = `url(${back})`;
       corpo.style.backgroundAttachment = 'fixed';
@@ -39,8 +40,12 @@ function InserirFilmesNaTela(filmes) {
       corpo.style.backgroundRepeat = 'no-repeat';
     })
 
-    ElementoParaInserirFilmes.appendChild(section);
+    ElementoParaInserirFilmes.appendChild(card);
   });
 }
 
 export {InserirFilmesNaTela}
+
+
+
+
