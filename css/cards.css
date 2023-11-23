@@ -21,7 +21,7 @@ a
 .search_result
 
 {
-    display: none;
+    opacity: 0;
 }
 
 .pesquisaDeFilmes
@@ -51,11 +51,12 @@ a
     transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.filmes
+.filmes, .pesquisaDeFilmes
 
 {
+    margin-top: -170px;
     padding: 35px;
-    margin-top: -200px;
+    padding-top: 0;
 }
 
 .cards {

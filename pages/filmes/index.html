@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes - Screen</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/cabecalho.css">
+    <link rel="stylesheet" href="../../css/cards.css">
+    <link rel="stylesheet" href="../../css/filmes.css">
+
+</head>
+<body class="body" style="background-image: url('../../img/poster_filmes.jpg'); background-size: 100% 100vh;">
+    <header class="cabecalho">
+        <p class="cabecalho__titulo">Screen</p>
+        <ul>
+          <li><a href="../../index.html">home</a></li>
+          <li style="margin-top: -5px; border-bottom: 2px solid #ff0015;"><a href="pages/filmes.html">filmes</a></li>
+          <li><a href="pages/series.html">séries</a></li>
+          <li><a href="pages/tvshows.html">TV Shows</a></li>
+          <li><a href="pages/sobre.html">sobre</a></li>
+        </ul>
+        <div class="pesquisa">
+          <div class="cabecalho__pesquisa">
+            <input type="text" class="cabecalho__pesquisa-input"/>
+            <a href="#search_result">
+            <span class="cabecalho__pesquisa-lupa">
+              <img src="../../img/search-icon.svg" alt=""/>
+            </span></a>
+          </div>
+        </div>
+      </header>
+
+      <div class="filmAlert">
+        <img src="../../img/besouro azul.png" alt="" width="450">
+        <p class="name">Besouro Azul</p>
+        <p class="descricao">O adolecente Jaime Reyes ganha super poderes quando um misterioso escaravelho se prende à sua coluna e lhe fornece uma poderosa armadura alienígena azul</p>
+        <div class="buttons">
+          <button>Assistir</button>
+          <button>Adicionar aos favoritos</button>
+        </div>
+      </div>
+
+      <div class="pesquisaDeFilmes">
+        <div class="title">
+          <p id="search_result" class="populares search_result">Resultados da pesquisa</p>
+        </div>  
+        <section class="filmesDaPesquisa"></section>
+      </div>
+
+      <div class="filmes">
+        <div class="title">
+          <p class="populares">Títulos em alta</p><a href="#" class="verMais">Ver mais+</a>
+        </div>
+        <section id="filmes"></section>
+      </div>
+
+
+      <script src="../../js/usuario.js"></script>
+      <script src="pesquisa.js"></script>
+</body>
+</html>
