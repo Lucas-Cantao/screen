@@ -16,22 +16,34 @@
     <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
   </head>
   <body class="body">
+
+
+
+
     <header class="cabecalho">
       <p class="cabecalho__titulo">Screen</p>
       <ul>
         <li style="margin-top: -5px; border-bottom: 2px solid #ff0015;"><a href="index.html">home</a></li>
         <li><a href="pages/filmes/">filmes</a></li>
-        <li><a href="pages/series.html">séries</a></li>
-        <li><a href="pages/tvshows.html">TV Shows</a></li>
+        <li><a href="pages/series/">séries e programas de TV</a></li>
         <li><a href="pages/sobre.html">sobre</a></li>
       </ul>
       <div class="pesquisa">
         <div class="cabecalho__pesquisa">
           <input type="text" class="cabecalho__pesquisa-input"/>
+          <span class="sem_resultado">Nenhum resultado encontrado</span>
           <a href="#search_result">
           <span class="cabecalho__pesquisa-lupa">
             <img src="img/search-icon.svg" alt=""/>
           </span></a>
+        </div>
+        <div class="usuario" style="color: white;">
+          <div id="exit_user">
+            <img src="img/exit_white.png" alt="" width="27px"><span>Sair da conta</span>
+          </div>
+          <div>
+            <img src="img/Star.svg" style="rotate: 0deg;" alt="" width="27px"><span>Favoritos</span>
+          </div>
         </div>
       </div>
     </header>

@@ -35,4 +35,79 @@ body {
     text-align: center;
     margin: 10px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.user img
+
+{
+    transition: .1s ease-in;
+    padding: 5px;
+    width: 25px;
+    height: 18px;
+}
+
+.user img:hover
+
+{
+    scale: 1.2;
+}
+
+
+
+
+
+.usuario
+
+{
+    display: none;
+    align-items: center;
+    position: fixed;
+    left: 86.5%;
+    cursor: pointer;
+    top: 5%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.usuario div{
+    transition: .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.usuario div:hover
+
+{
+    scale: 1.08;
+    color: white;
+}
+
+.usuario div img
+
+{
+    margin: 10px;
+    rotate: 180deg;
+    width: 20px;
+    height: 22px;
+}
+
+.usuarioMostrando
+
+{
+    display: flex;
+    top: 8%;
+}
+
+.arrowRotate
+
+{
+    rotate: 180deg;
+}
+
+.usuario div
+
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

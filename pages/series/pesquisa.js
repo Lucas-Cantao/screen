@@ -39,7 +39,7 @@ function InserirDaPesquisaFilmesNaTela(filmes) {
         corpo.style.backgroundRepeat = 'no-repeat';
       });
       section.addEventListener('mouseout', () => {
-        corpo.style.backgroundImage = `url(../../img/poster_filmes.jpg`;
+        corpo.style.backgroundImage = `url(../../img/poster_series.jpg`;
         corpo.style.backgroundAttachment = 'fixed';
         corpo.style.backgroundPosition = 'center';
         corpo.style.backgroundSize = '100% 100vh';
@@ -55,7 +55,7 @@ function InserirDaPesquisaFilmesNaTela(filmes) {
 const search = () => {
   const input_request = document.querySelector('.cabecalho__pesquisa-input');
   let movies_requested = []
-  fetch(`https://api.themoviedb.org/3/search/movie?query=${input_request.value}&api_key=${apiKey}&language=pt-BR`)
+  fetch(`https://api.themoviedb.org/3/search/tv?query=${input_request.value}&api_key=${apiKey}&language=pt-BR`)
     .then(response => response.json())
     .then(data => {
       movies_requested = data.results
@@ -111,7 +111,7 @@ function InserirFilmesNaTela(filmes) {
         corpo.style.backgroundRepeat = 'no-repeat';
       });
       section.addEventListener('mouseout', () => {
-        corpo.style.background = `url('../../img/poster_filmes.jpg')`;
+        corpo.style.background = `url('../../img/poster_series.jpg')`;
         corpo.style.backgroundAttachment = 'fixed';
         corpo.style.backgroundPosition = 'center';
         corpo.style.backgroundSize = '100% 100vh';
@@ -127,7 +127,7 @@ function InserirFilmesNaTela(filmes) {
   
   let movies = [];
   
-  fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=pt-BR`)
+  fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&language=pt-BR`)
     .then(response => response.json())
     .then(data => {
       movies = data.results.slice(0, 15); // Atribui o valor a movies, por exemplo (top 15 filmes populares)
@@ -136,6 +136,7 @@ function InserirFilmesNaTela(filmes) {
     .catch(error => {
       console.error('Ocorreu um erro ao obter os filmes populares:', error);
   });
+
 
 
   document.addEventListener('keypress', (event) => {

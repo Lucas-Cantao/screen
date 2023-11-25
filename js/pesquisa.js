@@ -51,7 +51,7 @@ function InserirDaPesquisaFilmesNaTela(filmes) {
   });
 }
 
-
+const sem_resultado = document.querySelector('.sem_resultado')
 
 const search = () => {
   const input_request = document.querySelector('.cabecalho__pesquisa-input');
@@ -64,11 +64,20 @@ const search = () => {
         filmesDaPesquisa.innerHTML = '';
         search_result.style.opacity = '0';
         console.log('nenhum resultado disponível')
+        sem_resultado.style.display = 'block';
+
       }else{
+        sem_resultado.style.display = 'none';
         InserirDaPesquisaFilmesNaTela(movies_requested)
       }
     })
 }
 
+
+document.addEventListener('keypress', (event) => {
+  if(event.key === 'Enter'){
+    search()
+  }
+})
 
 pesquisar.addEventListener('click', search)
